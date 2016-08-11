@@ -1,12 +1,93 @@
-body {
-	background:red;
+.container { 
+  max-width: 88%;
+  margin: 0 auto;
+  display: flex;
 }
 
-h1 {
-	font-family: 'Ubuntu Condensed', sans-serif;
-	color: white;
+.wrapper {
+  margin: 0 auto;
 }
 
-h1:hover {
-	color: black;
+.container .wrapper p {
+  padding: .5em;
+  background: rgba(125,125,125,0.5);
+  width: 1em;
+  font-size: 3em;
+  letter-spacing: 3em;
+}
+
+/*! responsive-nav.js 1.0.39 by @viljamis */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.nav-collapse li a {
+  padding: .7em 0;
+  display: block;
+  border-bottom: 1px solid #ffffff;
+  text-align: center;
+}
+
+.nav-collapse li a:last-child {
+  border-bottom: none;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  user-select: none;
+  width: 32px;
+  height: 32px;
+  background-image: url('img/hamburger.svg');
+  float: right;
+  margin-right: 6%;
+  /* Hide menu text */
+  text-indent: 110%;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-collapse ul {
+    width: 88%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-collapse ul li a {
+    border-bottom: none;
+  }
 }
